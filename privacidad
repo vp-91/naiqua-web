@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidad - Naiqua</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-50 p-6 md:p-20 font-sans text-slate-800">
+    <div class="max-w-3xl mx-auto bg-white p-8 md:p-12 rounded-[2.5rem] shadow-sm border border-slate-100">
+        <h1 class="text-3xl font-extrabold mb-8 text-slate-900">Política de Privacidad</h1>
+        
+        <h2 class="text-xl font-bold mb-4">Responsable del Tratamiento</h2>
+        <p class="mb-6">Sueño Dorado Mallorca SL (B24749319), con domicilio en Puig des Teix, Local 18, 07180.</p>
+
+        <h2 class="text-xl font-bold mb-4">Finalidad de los Datos</h2>
+        <p class="mb-6 leading-relaxed text-slate-600">Cuando nos contactas a través de WhatsApp o solicitas información, utilizamos tus datos únicamente para atender tu solicitud y ofrecerte información sobre nuestros sistemas de purificación de agua.</p>
+
+        <h2 class="text-xl font-bold mb-4">Tus Derechos</h2>
+        <p class="mb-8 leading-relaxed text-slate-600">Puedes solicitar el acceso, rectificación o eliminación de tus datos en cualquier momento enviando un correo electrónico a <strong>sdorado.mallorca@gmail.com</strong>.</p>
+        
+        <a href="index.html" class="inline-flex items-center gap-2 font-bold text-[#6981FC] hover:gap-4 transition-all">
+            ← Volver a la página principal
+        </a>
+    </div>
+</body>
+</html>

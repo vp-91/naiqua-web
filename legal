@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aviso Legal - Naiqua</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-50 p-6 md:p-20 font-sans text-slate-800">
+    <div class="max-w-3xl mx-auto bg-white p-8 md:p-12 rounded-[2.5rem] shadow-sm border border-slate-100">
+        <h1 class="text-3xl font-extrabold mb-8 text-slate-900">Aviso Legal</h1>
+        <p class="mb-6">En cumplimiento de la Ley 34/2002 de Servicios de la Sociedad de la Información y de Comercio Electrónico (LSSI-CE), se informa a los usuarios de los siguientes datos identificativos:</p>
+        
+        <div class="space-y-4 mb-8 bg-slate-50 p-6 rounded-2xl">
+            <p><strong>Titular:</strong> Sueño Dorado Mallorca SL</p>
+            <p><strong>NIF/CIF:</strong> B24749319</p>
+            <p><strong>Domicilio:</strong> Puig des Teix, Local 18, 07180, Mallorca, España</p>
+            <p><strong>Email:</strong> sdorado.mallorca@gmail.com</p>
+        </div>
+
+        <h2 class="text-xl font-bold mb-4">Condiciones de Uso</h2>
+        <p class="mb-6 leading-relaxed text-slate-600">El acceso y uso de este sitio web atribuye la condición de usuario e implica la aceptación total de las condiciones aquí expuestas. Naiqua se reserva el derecho de modificar cualquier información del sitio sin previo aviso.</p>
+        
+        <a href="index.html" class="inline-flex items-center gap-2 font-bold text-[#6981FC] hover:gap-4 transition-all">
+            ← Volver a la página principal
+        </a>
+    </div>
+</body>
+</html>

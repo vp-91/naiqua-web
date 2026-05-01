@@ -48,21 +48,20 @@
         .glass-nav { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(20px); }
         .brand-gradient { background: linear-gradient(135deg, #6981FC 0%, #3f6de5 100%); }
         
-        /* IMAGEN DE MÓVIL (1:1) */
-        .hero-bg-mobile {
+        /* BLOQUE IMAGEN MÓVIL (1:1) */
+        .hero-image-box {
             background-image: url('https://res.cloudinary.com/dob5eavlw/image/upload/v1777594507/Untitled_design_-_2026-05-01T021459.680_jwuomz.png');
             background-size: contain;
-            background-position: center bottom;
+            background-position: center center;
             background-repeat: no-repeat;
         }
 
-        /* IMAGEN DE DESKTOP (Original) */
+        /* BLOQUE IMAGEN DESKTOP (Apaisada) */
         @media (min-width: 1024px) {
-            .hero-bg-desktop {
+            .hero-image-box {
                 background-image: url('https://res.cloudinary.com/dob5eavlw/image/upload/v1777568597/Untitled_design_-_2026-04-30T190310.693_b670ze.png');
                 background-size: cover;
                 background-position: center right;
-                background-repeat: no-repeat;
             }
         }
     </style>
@@ -79,11 +78,11 @@
     </nav>
 
     <main>
-        <!-- 1. Hero DEFINITIVO -->
+        <!-- 1. Hero -->
         <section class="relative min-h-screen flex flex-col lg:flex-row bg-white overflow-hidden">
             
-            <!-- Bloque de Texto (Siempre arriba en móvil) -->
-            <div class="relative z-10 flex-1 flex items-center pt-32 pb-6 lg:py-20 px-8">
+            <!-- Bloque de Texto -->
+            <div class="relative z-10 flex-1 flex items-center pt-32 pb-8 lg:py-20 px-8">
                 <div class="max-w-2xl mx-auto lg:mx-0 text-center lg:text-left">
                     <span class="inline-block py-1 px-3 bg-brand-pop/10 text-brand-pop rounded-full text-xs md:text-sm font-bold tracking-wider mb-6 uppercase">Siente la pureza</span>
                     <h1 class="font-headline text-5xl md:text-7xl font-extrabold text-on-surface leading-[1.1] mb-6 tracking-tight">Tu salud nace en el <span class="text-brand-pop">agua que bebes.</span></h1>
@@ -96,14 +95,14 @@
                 </div>
             </div>
 
-            <!-- Bloque de Imagen: Se comporta distinto según la pantalla -->
-            <div class="relative w-full lg:w-1/2 h-[400px] md:h-[500px] lg:h-auto hero-bg-mobile lg:hero-bg-desktop lg:absolute lg:right-0 lg:top-0 lg:bottom-0">
-                <!-- Sin degradados molestos -->
+            <!-- Bloque de Imagen -->
+            <div class="relative w-full lg:w-1/2 h-[450px] lg:h-auto hero-image-box lg:absolute lg:right-0 lg:top-0 lg:bottom-0">
+                <!-- Sin degradados adicionales para mantener limpieza visual -->
             </div>
 
         </section>
 
-        <!-- El resto de las secciones se mantienen igual -->
+        <!-- 2. Dolor -->
         <section class="py-24 bg-surface-container-low text-center">
             <div class="max-w-7xl mx-auto px-8">
                 <h2 class="font-headline text-3xl md:text-4xl font-bold mb-16 text-on-surface">Lo que tu cuerpo (y tu espalda) no necesitan</h2>
@@ -127,6 +126,7 @@
             </div>
         </section>
 
+        <!-- 3. Misión -->
         <section class="py-24 bg-surface">
             <div class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 items-center text-left">
                 <img alt="Misión Naiqua" class="rounded-[2rem] editorial-shadow w-full aspect-square object-cover" src="https://res.cloudinary.com/dob5eavlw/image/upload/v1777564273/magnific_replica-exactamente-esta-_2898750346_1_xn07yk.png"/>
@@ -138,6 +138,7 @@
             </div>
         </section>
 
+        <!-- 4. Ósmosis Detallada -->
         <section class="py-24 bg-surface-container-lowest text-left">
             <div class="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 <div>
@@ -153,6 +154,7 @@
             </div>
         </section>
 
+        <!-- 5. Productos -->
         <section id="productos" class="py-24 bg-surface-container-low text-center">
             <div class="max-w-7xl mx-auto px-8">
                 <h2 class="font-headline text-4xl font-bold mb-16 text-on-surface">Tecnología diseñada para tu hogar</h2>
@@ -177,6 +179,7 @@
             </div>
         </section>
 
+        <!-- 6. Lifestyle & Sidebar -->
         <section class="py-24 bg-surface text-left">
             <div class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-12 gap-8 items-stretch">
                 <div class="md:col-span-7 bg-brand-pop rounded-[2.5rem] p-10 md:p-12 text-white relative overflow-hidden flex flex-col justify-end editorial-shadow min-h-[500px]">

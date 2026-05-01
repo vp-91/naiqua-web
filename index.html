@@ -48,14 +48,14 @@
         .glass-nav { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(20px); }
         .brand-gradient { background: linear-gradient(135deg, #6981FC 0%, #3f6de5 100%); }
         
-        /* Ajuste de Imagen con ZOOM para Móvil */
+        /* Ajuste de Imagen con ZOOM MAX para Móvil */
         .hero-bg-image {
             background-image: url('https://res.cloudinary.com/dob5eavlw/image/upload/v1777568597/Untitled_design_-_2026-04-30T190310.693_b670ze.png');
             background-repeat: no-repeat;
-            /* Zoom en móvil: 180% para que las máquinas se vean grandes */
-            background-size: 180%; 
-            /* Bajamos el foco para que se vean las máquinas y no el aire de arriba */
-            background-position: 90% 80%; 
+            /* Zoom masivo en móvil para máquinas gigantes */
+            background-size: 240%; 
+            /* Posicionamos para que las máquinas llenen el cuadro */
+            background-position: 95% 90%; 
         }
 
         @media (min-width: 1024px) {
@@ -78,29 +78,33 @@
     </nav>
 
     <main>
-        <!-- 1. Hero CORREGIDO (Zoom en Imagen) -->
+        <!-- 1. Hero CORREGIDO (Orden: Texto primero, Imagen después) -->
         <section class="relative min-h-screen flex flex-col lg:flex-row bg-white overflow-hidden">
-            <!-- Bloque de Imagen (Arriba en móvil con más altura) -->
-            <div class="relative w-full lg:w-1/2 h-[450px] lg:h-auto hero-bg-image lg:absolute lg:right-0 lg:top-0 lg:bottom-0 order-first lg:order-last">
-                <div class="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent lg:bg-gradient-to-r lg:from-white lg:via-transparent lg:to-transparent"></div>
-            </div>
-
-            <!-- Bloque de Texto -->
-            <div class="relative z-10 flex-1 flex items-center pt-10 pb-16 lg:py-20 px-8">
+            
+            <!-- Bloque de Texto (Primero en móvil y escritorio) -->
+            <div class="relative z-10 flex-1 flex items-center pt-32 pb-8 lg:py-20 px-8">
                 <div class="max-w-2xl mx-auto lg:mx-0 text-center lg:text-left">
                     <span class="inline-block py-1 px-3 bg-brand-pop/10 text-brand-pop rounded-full text-xs font-bold tracking-wider mb-6 uppercase">Siente la pureza</span>
                     <h1 class="font-headline text-5xl md:text-7xl font-extrabold text-on-surface leading-[1.1] mb-6 tracking-tight">Tu salud nace en el <span class="text-brand-pop">agua que bebes.</span></h1>
                     <p class="text-lg md:text-xl text-on-surface-variant leading-relaxed mb-10 max-w-lg mx-auto lg:mx-0">Descubre cómo Naiqua transforma cada gota en tu hogar. Pureza infinita, comodidad absoluta y el cuidado que tu familia merece.</p>
                     
+                    <!-- Botones -->
                     <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start relative z-20">
                         <a href="https://wa.me/34628101680?text=Hola!%20Me%20gustaría%20saber%20más%20sobre%20vuestros%20productos%20de%20Naiqua" target="_blank" class="brand-gradient text-white px-8 py-4 rounded-xl font-bold text-lg shadow-xl shadow-brand-pop/30 hover:scale-105 active:scale-95 transition-all text-center">Solicita una Demo</a>
                         <a href="#productos" class="bg-surface border border-outline-variant/30 text-on-surface px-8 py-4 rounded-xl font-bold text-lg hover:bg-surface-container-low active:scale-95 transition-colors text-center">Ver productos</a>
                     </div>
                 </div>
             </div>
+
+            <!-- Bloque de Imagen (Debajo del texto en móvil) -->
+            <div class="relative w-full lg:w-1/2 h-[400px] lg:h-auto hero-bg-image lg:absolute lg:right-0 lg:top-0 lg:bottom-0">
+                <!-- Degradado para fundir con el blanco -->
+                <div class="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent lg:bg-gradient-to-r lg:from-white lg:via-transparent lg:to-transparent"></div>
+            </div>
+
         </section>
 
-        <!-- 2. Dolor -->
+        <!-- (El resto de las secciones permanecen iguales) -->
         <section class="py-24 bg-surface-container-low text-center">
             <div class="max-w-7xl mx-auto px-8">
                 <h2 class="font-headline text-3xl md:text-4xl font-bold mb-16 text-on-surface">Lo que tu cuerpo (y tu espalda) no necesitan</h2>
@@ -157,7 +161,6 @@
             <div class="max-w-7xl mx-auto px-8">
                 <h2 class="font-headline text-4xl font-bold mb-16 text-on-surface">Tecnología diseñada para tu hogar</h2>
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 text-left">
-                    <!-- Naiqua S -->
                     <div class="group bg-surface-container-lowest rounded-[2.5rem] overflow-hidden shadow-lg transition-all duration-500 hover:-translate-y-4 hover:shadow-2xl flex flex-col">
                         <img class="w-full h-[350px] md:h-[450px] object-cover" src="https://res.cloudinary.com/dob5eavlw/image/upload/v1777564171/Untitled_design_-_2026-04-30T174903.626_ejvfur.png" alt="Naiqua S"/>
                         <div class="p-8 md:p-10 flex-grow">
@@ -166,7 +169,6 @@
                             <a href="https://wa.me/34628101680?text=Hola!%20Me%20interesa%20el%20modelo%20Naiqua%20S" target="_blank" class="font-bold text-brand-pop inline-flex items-center gap-2 group-hover:gap-4 transition-all">Más información <span class="material-symbols-outlined">arrow_forward</span></a>
                         </div>
                     </div>
-                    <!-- Naiqua X -->
                     <div class="group bg-surface-container-lowest rounded-[2.5rem] overflow-hidden shadow-lg transition-all duration-500 hover:-translate-y-4 hover:shadow-2xl flex flex-col">
                         <img class="w-full h-[350px] md:h-[450px] object-cover" src="https://res.cloudinary.com/dob5eavlw/image/upload/v1777564183/Untitled_design_-_2026-04-30T174925.644_nqgmmo.png" alt="Naiqua X"/>
                         <div class="p-8 md:p-10 flex-grow">

@@ -10,7 +10,7 @@
     <link rel="icon" href="https://res.cloudinary.com/dob5eavlw/image/upload/v1777589254/23cd544a-93d3-4ddb-bf14-170b37fdd4a8_lmadbp.png" type="image/png">
     <meta name="theme-color" content="#6981FC">
 
-    <!-- Open Graph (WhatsApp/Redes Sociales) -->
+    <!-- Open Graph -->
     <meta property="og:title" content="Naiqua | El Agua Que Mereces">
     <meta property="og:description" content="Sistemas de purificación de agua premium para tu hogar. Siente la pureza.">
     <meta property="og:image" content="https://res.cloudinary.com/dob5eavlw/image/upload/v1777589254/23cd544a-93d3-4ddb-bf14-170b37fdd4a8_lmadbp.png">
@@ -48,21 +48,13 @@
         .glass-nav { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(20px); }
         .brand-gradient { background: linear-gradient(135deg, #6981FC 0%, #3f6de5 100%); }
         
-        /* Imagen Desktop Original */
-        .hero-final {
-            background-image: url('https://res.cloudinary.com/dob5eavlw/image/upload/v1777568597/Untitled_design_-_2026-04-30T190310.693_b670ze.png');
-            background-size: cover;
-            background-position: center right;
-            background-repeat: no-repeat;
-        }
-
-        /* Imagen Móvil 1:1 */
-        @media (max-width: 1024px) {
-            .hero-final { 
-                background-image: url('https://res.cloudinary.com/dob5eavlw/image/upload/v1777594507/Untitled_design_-_2026-05-01T021459.680_jwuomz.png');
-                background-position: center bottom;
-                background-size: contain;
-                min-height: 100vh; /* Para que quepa todo el diseño en móvil */
+        /* Desktop: Imagen de fondo a la derecha */
+        @media (min-width: 1024px) {
+            .hero-desktop-bg {
+                background-image: url('https://res.cloudinary.com/dob5eavlw/image/upload/v1777568597/Untitled_design_-_2026-04-30T190310.693_b670ze.png');
+                background-size: cover;
+                background-position: center right;
+                background-repeat: no-repeat;
             }
         }
     </style>
@@ -79,21 +71,27 @@
     </nav>
 
     <main>
-        <!-- 1. Hero -->
-        <section class="relative min-h-screen flex items-center pt-20 bg-white hero-final">
-            <!-- Degradado: Solo visible en desktop (lg) para no manchar la imagen 1:1 en móvil -->
-            <div class="absolute inset-0 hidden lg:block bg-gradient-to-r from-white via-white/20 lg:from-white/60 lg:via-transparent to-transparent"></div>
+        <!-- 1. Hero Re-estructurado -->
+        <section class="relative min-h-screen flex flex-col lg:flex-row bg-white lg:hero-desktop-bg">
+            <!-- Degradado Desktop -->
+            <div class="absolute inset-0 hidden lg:block bg-gradient-to-r from-white via-white/40 to-transparent"></div>
             
-            <div class="relative z-10 max-w-7xl mx-auto px-8 w-full text-left">
-                <div class="max-w-2xl">
+            <!-- Bloque Texto -->
+            <div class="relative z-10 flex-1 flex items-center pt-32 pb-10 lg:py-20 px-8">
+                <div class="max-w-2xl mx-auto lg:mx-0 text-left">
                     <span class="inline-block py-1 px-3 bg-brand-pop/10 text-brand-pop rounded-full text-sm font-bold tracking-wider mb-6">SIENTE LA PUREZA</span>
-                    <h1 class="font-headline text-6xl md:text-7xl font-extrabold text-on-surface leading-[1.1] mb-6 tracking-tight">Tu salud nace en el <span class="text-brand-pop">agua que bebes.</span></h1>
+                    <h1 class="font-headline text-5xl md:text-7xl font-extrabold text-on-surface leading-[1.1] mb-6 tracking-tight">Tu salud nace en el <span class="text-brand-pop">agua que bebes.</span></h1>
                     <p class="text-xl text-on-surface-variant leading-relaxed mb-10 max-w-lg">Descubre cómo Naiqua transforma cada gota en tu hogar. Pureza infinita, comodidad absoluta y el cuidado que tu familia merece.</p>
-                    <div class="flex flex-col sm:flex-row gap-4">
-                        <a href="https://wa.me/34628101680?text=Hola!%20Me%20gustaría%20saber%20más%20sobre%20vuestros%20productos%20de%20Naiqua" target="_blank" class="brand-gradient text-white px-8 py-4 rounded-xl font-bold text-lg shadow-xl shadow-brand-pop/30 hover:scale-105 transition-all text-center">Solicita una Demo</a>
+                    <div class="flex flex-col sm:flex-row gap-4 relative z-20">
+                        <a href="https://wa.me/34628101680?text=Hola!%20Me%20gustaría%20saber%20más%20sobre%20vuestros%20productos%20de%20Naiqua" target="_blank" class="brand-gradient text-white px-8 py-4 rounded-xl font-bold text-lg shadow-xl shadow-brand-pop/30 hover:scale-105 active:scale-95 transition-all text-center">Solicita una Demo</a>
                         <a href="#productos" class="bg-white border border-outline-variant/30 text-on-surface px-8 py-4 rounded-xl font-bold text-lg hover:bg-surface-container-low transition-colors text-center">Ver productos</a>
                     </div>
                 </div>
+            </div>
+
+            <!-- Bloque Imagen Móvil (Solo visible en pantallas pequeñas) -->
+            <div class="lg:hidden w-full px-4 pb-12">
+                <img src="https://res.cloudinary.com/dob5eavlw/image/upload/v1777594507/Untitled_design_-_2026-05-01T021459.680_jwuomz.png" alt="Naiqua Sistemas" class="w-full h-auto object-contain rounded-3xl">
             </div>
         </section>
 

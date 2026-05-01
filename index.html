@@ -48,11 +48,13 @@
         .glass-nav { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(20px); }
         .brand-gradient { background: linear-gradient(135deg, #6981FC 0%, #3f6de5 100%); }
         
-        /* Ajuste de Hero para Responsive */
+        /* Ajuste Maestro de Imagen para Hero */
         .hero-bg-image {
             background-image: url('https://res.cloudinary.com/dob5eavlw/image/upload/v1777568597/Untitled_design_-_2026-04-30T190310.693_b670ze.png');
             background-size: cover;
-            background-position: center;
+            background-repeat: no-repeat;
+            /* En móvil enfocamos las máquinas (derecha de la imagen original) */
+            background-position: 85% center;
         }
 
         @media (min-width: 1024px) {
@@ -74,26 +76,24 @@
     </nav>
 
     <main>
-        <!-- 1. Hero CORREGIDO para Responsive -->
+        <!-- 1. Hero CORREGIDO (Orden e Imagen para Móvil) -->
         <section class="relative min-h-screen flex flex-col lg:flex-row bg-white overflow-hidden">
             <!-- Bloque de Texto -->
-            <div class="relative z-10 flex-1 flex items-center pt-32 pb-10 lg:py-20 px-8">
-                <div class="max-w-2xl mx-auto lg:mx-0">
+            <div class="relative z-10 flex-1 flex items-center pt-28 pb-10 lg:py-20 px-8">
+                <div class="max-w-2xl mx-auto lg:mx-0 text-center lg:text-left">
                     <span class="inline-block py-1 px-3 bg-brand-pop/10 text-brand-pop rounded-full text-xs md:text-sm font-bold tracking-wider mb-6 uppercase">Siente la pureza</span>
                     <h1 class="font-headline text-5xl md:text-7xl font-extrabold text-on-surface leading-[1.1] mb-6 tracking-tight">Tu salud nace en el <span class="text-brand-pop">agua que bebes.</span></h1>
-                    <p class="text-lg md:text-xl text-on-surface-variant leading-relaxed mb-10 max-w-lg">Descubre cómo Naiqua transforma cada gota en tu hogar. Pureza infinita, comodidad absoluta y el cuidado que tu familia merece.</p>
+                    <p class="text-lg md:text-xl text-on-surface-variant leading-relaxed mb-10 max-w-lg mx-auto lg:mx-0">Descubre cómo Naiqua transforma cada gota en tu hogar. Pureza infinita, comodidad absoluta y el cuidado que tu familia merece.</p>
                     
-                    <!-- Botones visibles en móvil siempre -->
-                    <div class="flex flex-col sm:flex-row gap-4 relative z-20">
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start relative z-20">
                         <a href="https://wa.me/34628101680?text=Hola!%20Me%20gustaría%20saber%20más%20sobre%20vuestros%20productos%20de%20Naiqua" target="_blank" class="brand-gradient text-white px-8 py-4 rounded-xl font-bold text-lg shadow-xl shadow-brand-pop/30 hover:scale-105 active:scale-95 transition-all text-center">Solicita una Demo</a>
                         <a href="#productos" class="bg-surface border border-outline-variant/30 text-on-surface px-8 py-4 rounded-xl font-bold text-lg hover:bg-surface-container-low active:scale-95 transition-colors text-center">Ver productos</a>
                     </div>
                 </div>
             </div>
 
-            <!-- Bloque de Imagen: En móvil debajo, en desktop al lado -->
-            <div class="relative w-full lg:w-1/2 h-[400px] lg:h-auto hero-bg-image lg:absolute lg:right-0 lg:top-0 lg:bottom-0">
-                <!-- Degradado para fundir la imagen con el fondo blanco en móvil (arriba) y desktop (izquierda) -->
+            <!-- Bloque de Imagen: Primero en móvil, lateral en desktop -->
+            <div class="relative w-full lg:w-1/2 h-[350px] md:h-[450px] lg:h-auto hero-bg-image lg:absolute lg:right-0 lg:top-0 lg:bottom-0 order-first lg:order-last">
                 <div class="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent lg:bg-gradient-to-r lg:from-white lg:via-transparent lg:to-transparent"></div>
             </div>
         </section>
@@ -161,7 +161,7 @@
                         <div class="p-8 md:p-10 flex-grow">
                             <h3 class="font-headline text-3xl font-bold mb-2 text-on-surface">Naiqua S</h3>
                             <p class="text-on-surface-variant text-lg mb-6 leading-relaxed">Dispensador con agua fría y caliente al instante. Elegancia y salud en un solo equipo.</p>
-                            <a href="https://wa.me/34628101680?text=Hola!%20Me%20gustaría%20saber%20más%20sobre%20el%20modelo%20Naiqua%20S" target="_blank" class="font-bold text-brand-pop inline-flex items-center gap-2 group-hover:gap-4 transition-all">Más información <span class="material-symbols-outlined">arrow_forward</span></a>
+                            <a href="https://wa.me/34628101680?text=Hola!%20Me%20interesa%20el%20modelo%20Naiqua%20S" target="_blank" class="font-bold text-brand-pop inline-flex items-center gap-2 group-hover:gap-4 transition-all">Más información <span class="material-symbols-outlined">arrow_forward</span></a>
                         </div>
                     </div>
                     <!-- Naiqua X -->
@@ -170,7 +170,7 @@
                         <div class="p-8 md:p-10 flex-grow">
                             <h3 class="font-headline text-3xl font-bold mb-2 text-on-surface">Naiqua X</h3>
                             <p class="text-on-surface-variant text-lg mb-6 leading-relaxed">Máximo rendimiento compacto. Flujo directo de 800 GPD para tu cocina.</p>
-                            <a href="https://wa.me/34628101680?text=Hola!%20Me%20gustaría%20saber%20más%20sobre%20el%20modelo%20Naiqua%20X" target="_blank" class="font-bold text-brand-pop inline-flex items-center gap-2 group-hover:gap-4 transition-all">Más información <span class="material-symbols-outlined">arrow_forward</span></a>
+                            <a href="https://wa.me/34628101680?text=Hola!%20Me%20interesa%20el%20modelo%20Naiqua%20X" target="_blank" class="font-bold text-brand-pop inline-flex items-center gap-2 group-hover:gap-4 transition-all">Más información <span class="material-symbols-outlined">arrow_forward</span></a>
                         </div>
                     </div>
                 </div>

@@ -48,17 +48,19 @@
         .glass-nav { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(20px); }
         .brand-gradient { background: linear-gradient(135deg, #6981FC 0%, #3f6de5 100%); }
         
-        /* Ajuste Maestro de Imagen para Hero */
+        /* Ajuste de Imagen con ZOOM para Móvil */
         .hero-bg-image {
             background-image: url('https://res.cloudinary.com/dob5eavlw/image/upload/v1777568597/Untitled_design_-_2026-04-30T190310.693_b670ze.png');
-            background-size: cover;
             background-repeat: no-repeat;
-            /* En móvil enfocamos las máquinas (derecha de la imagen original) */
-            background-position: 85% center;
+            /* Zoom en móvil: 180% para que las máquinas se vean grandes */
+            background-size: 180%; 
+            /* Bajamos el foco para que se vean las máquinas y no el aire de arriba */
+            background-position: 90% 80%; 
         }
 
         @media (min-width: 1024px) {
             .hero-bg-image {
+                background-size: cover;
                 background-position: center right;
             }
         }
@@ -76,12 +78,17 @@
     </nav>
 
     <main>
-        <!-- 1. Hero CORREGIDO (Orden e Imagen para Móvil) -->
+        <!-- 1. Hero CORREGIDO (Zoom en Imagen) -->
         <section class="relative min-h-screen flex flex-col lg:flex-row bg-white overflow-hidden">
+            <!-- Bloque de Imagen (Arriba en móvil con más altura) -->
+            <div class="relative w-full lg:w-1/2 h-[450px] lg:h-auto hero-bg-image lg:absolute lg:right-0 lg:top-0 lg:bottom-0 order-first lg:order-last">
+                <div class="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent lg:bg-gradient-to-r lg:from-white lg:via-transparent lg:to-transparent"></div>
+            </div>
+
             <!-- Bloque de Texto -->
-            <div class="relative z-10 flex-1 flex items-center pt-28 pb-10 lg:py-20 px-8">
+            <div class="relative z-10 flex-1 flex items-center pt-10 pb-16 lg:py-20 px-8">
                 <div class="max-w-2xl mx-auto lg:mx-0 text-center lg:text-left">
-                    <span class="inline-block py-1 px-3 bg-brand-pop/10 text-brand-pop rounded-full text-xs md:text-sm font-bold tracking-wider mb-6 uppercase">Siente la pureza</span>
+                    <span class="inline-block py-1 px-3 bg-brand-pop/10 text-brand-pop rounded-full text-xs font-bold tracking-wider mb-6 uppercase">Siente la pureza</span>
                     <h1 class="font-headline text-5xl md:text-7xl font-extrabold text-on-surface leading-[1.1] mb-6 tracking-tight">Tu salud nace en el <span class="text-brand-pop">agua que bebes.</span></h1>
                     <p class="text-lg md:text-xl text-on-surface-variant leading-relaxed mb-10 max-w-lg mx-auto lg:mx-0">Descubre cómo Naiqua transforma cada gota en tu hogar. Pureza infinita, comodidad absoluta y el cuidado que tu familia merece.</p>
                     
@@ -90,11 +97,6 @@
                         <a href="#productos" class="bg-surface border border-outline-variant/30 text-on-surface px-8 py-4 rounded-xl font-bold text-lg hover:bg-surface-container-low active:scale-95 transition-colors text-center">Ver productos</a>
                     </div>
                 </div>
-            </div>
-
-            <!-- Bloque de Imagen: Primero en móvil, lateral en desktop -->
-            <div class="relative w-full lg:w-1/2 h-[350px] md:h-[450px] lg:h-auto hero-bg-image lg:absolute lg:right-0 lg:top-0 lg:bottom-0 order-first lg:order-last">
-                <div class="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent lg:bg-gradient-to-r lg:from-white lg:via-transparent lg:to-transparent"></div>
             </div>
         </section>
 

@@ -7,13 +7,13 @@
 
     <!-- SEO & Favicon -->
     <meta name="description" content="Descubre cómo Naiqua transforma cada gota en tu hogar. Pureza infinita, comodidad absoluta y el cuidado que tu familia merece con sistemas de ósmosis avanzada."/>
-    <link rel="icon" href="https://res.cloudinary.com/dob5eavlw/image/upload/v1777591535/Untitled_design_-_2026-05-01T012515.522_a5boin.png" type="image/png">
+    <link rel="icon" href="https://res.cloudinary.com/dob5eavlw/image/upload/v1777589254/23cd544a-93d3-4ddb-bf14-170b37fdd4a8_lmadbp.png" type="image/png">
     <meta name="theme-color" content="#6981FC">
 
     <!-- Open Graph (WhatsApp/Redes Sociales) -->
     <meta property="og:title" content="Naiqua | El Agua Que Mereces">
     <meta property="og:description" content="Sistemas de purificación de agua premium para tu hogar. Siente la pureza.">
-    <meta property="og:image" content="https://res.cloudinary.com/dob5eavlw/image/upload/v1777591535/Untitled_design_-_2026-05-01T012515.522_a5boin.png">
+    <meta property="og:image" content="https://res.cloudinary.com/dob5eavlw/image/upload/v1777589254/23cd544a-93d3-4ddb-bf14-170b37fdd4a8_lmadbp.png">
 
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
@@ -48,20 +48,21 @@
         .glass-nav { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(20px); }
         .brand-gradient { background: linear-gradient(135deg, #6981FC 0%, #3f6de5 100%); }
         
-        /* BLOQUE IMAGEN MÓVIL (1:1) */
-        .hero-image-box {
-            background-image: url('https://res.cloudinary.com/dob5eavlw/image/upload/v1777594507/Untitled_design_-_2026-05-01T021459.680_jwuomz.png');
-            background-size: contain;
-            background-position: center center;
+        /* Imagen Desktop Original */
+        .hero-final {
+            background-image: url('https://res.cloudinary.com/dob5eavlw/image/upload/v1777568597/Untitled_design_-_2026-04-30T190310.693_b670ze.png');
+            background-size: cover;
+            background-position: center right;
             background-repeat: no-repeat;
         }
 
-        /* BLOQUE IMAGEN DESKTOP (Apaisada) */
-        @media (min-width: 1024px) {
-            .hero-image-box {
-                background-image: url('https://res.cloudinary.com/dob5eavlw/image/upload/v1777568597/Untitled_design_-_2026-04-30T190310.693_b670ze.png');
-                background-size: cover;
-                background-position: center right;
+        /* Imagen Móvil 1:1 */
+        @media (max-width: 1024px) {
+            .hero-final { 
+                background-image: url('https://res.cloudinary.com/dob5eavlw/image/upload/v1777594507/Untitled_design_-_2026-05-01T021459.680_jwuomz.png');
+                background-position: center bottom;
+                background-size: contain;
+                min-height: 100vh; /* Para que quepa todo el diseño en móvil */
             }
         }
     </style>
@@ -69,43 +70,37 @@
 <body class="bg-surface font-body text-on-surface">
     <!-- Nav -->
     <nav class="fixed top-0 w-full z-50 glass-nav border-b border-outline-variant/20">
-        <div class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
+        <div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
             <a href="index.html" class="block">
-                <img src="https://res.cloudinary.com/dob5eavlw/image/upload/v1777589254/23cd544a-93d3-4ddb-bf14-170b37fdd4a8_lmadbp.png" alt="Naiqua Logo" class="h-8 md:h-10 w-auto object-contain">
+                <img src="https://res.cloudinary.com/dob5eavlw/image/upload/v1777589254/23cd544a-93d3-4ddb-bf14-170b37fdd4a8_lmadbp.png" alt="Naiqua Logo" class="h-10 w-auto object-contain">
             </a>
-            <a href="https://wa.me/34628101680?text=Hola!%20Me%20gustaría%20saber%20más%20sobre%20vuestros%20productos%20de%20Naiqua" target="_blank" class="bg-brand-pop text-white px-4 py-2 md:px-6 md:py-2.5 rounded-xl font-semibold shadow-lg shadow-brand-pop/20 active:scale-95 transition-all text-sm md:text-base">Solicita una Demo</a>
+            <a href="https://wa.me/34628101680?text=Hola!%20Me%20gustaría%20saber%20más%20sobre%20vuestros%20productos%20de%20Naiqua" target="_blank" class="bg-brand-pop text-white px-6 py-2.5 rounded-xl font-semibold shadow-lg shadow-brand-pop/20 active:scale-90 transition-all">Solicita una Demo</a>
         </div>
     </nav>
 
     <main>
         <!-- 1. Hero -->
-        <section class="relative min-h-screen flex flex-col lg:flex-row bg-white overflow-hidden">
+        <section class="relative min-h-screen flex items-center pt-20 bg-white hero-final">
+            <!-- Degradado: Solo visible en desktop (lg) para no manchar la imagen 1:1 en móvil -->
+            <div class="absolute inset-0 hidden lg:block bg-gradient-to-r from-white via-white/20 lg:from-white/60 lg:via-transparent to-transparent"></div>
             
-            <!-- Bloque de Texto -->
-            <div class="relative z-10 flex-1 flex items-center pt-32 pb-8 lg:py-20 px-8">
-                <div class="max-w-2xl mx-auto lg:mx-0 text-center lg:text-left">
-                    <span class="inline-block py-1 px-3 bg-brand-pop/10 text-brand-pop rounded-full text-xs md:text-sm font-bold tracking-wider mb-6 uppercase">Siente la pureza</span>
-                    <h1 class="font-headline text-5xl md:text-7xl font-extrabold text-on-surface leading-[1.1] mb-6 tracking-tight">Tu salud nace en el <span class="text-brand-pop">agua que bebes.</span></h1>
-                    <p class="text-lg md:text-xl text-on-surface-variant leading-relaxed mb-10 max-w-lg mx-auto lg:mx-0">Descubre cómo Naiqua transforma cada gota en tu hogar. Pureza infinita, comodidad absoluta y el cuidado que tu familia merece.</p>
-                    
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start relative z-20">
-                        <a href="https://wa.me/34628101680?text=Hola!%20Me%20gustaría%20saber%20más%20sobre%20vuestros%20productos%20de%20Naiqua" target="_blank" class="brand-gradient text-white px-8 py-4 rounded-xl font-bold text-lg shadow-xl shadow-brand-pop/30 hover:scale-105 active:scale-95 transition-all text-center">Solicita una Demo</a>
-                        <a href="#productos" class="bg-surface border border-outline-variant/30 text-on-surface px-8 py-4 rounded-xl font-bold text-lg hover:bg-surface-container-low active:scale-95 transition-colors text-center">Ver productos</a>
+            <div class="relative z-10 max-w-7xl mx-auto px-8 w-full text-left">
+                <div class="max-w-2xl">
+                    <span class="inline-block py-1 px-3 bg-brand-pop/10 text-brand-pop rounded-full text-sm font-bold tracking-wider mb-6">SIENTE LA PUREZA</span>
+                    <h1 class="font-headline text-6xl md:text-7xl font-extrabold text-on-surface leading-[1.1] mb-6 tracking-tight">Tu salud nace en el <span class="text-brand-pop">agua que bebes.</span></h1>
+                    <p class="text-xl text-on-surface-variant leading-relaxed mb-10 max-w-lg">Descubre cómo Naiqua transforma cada gota en tu hogar. Pureza infinita, comodidad absoluta y el cuidado que tu familia merece.</p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="https://wa.me/34628101680?text=Hola!%20Me%20gustaría%20saber%20más%20sobre%20vuestros%20productos%20de%20Naiqua" target="_blank" class="brand-gradient text-white px-8 py-4 rounded-xl font-bold text-lg shadow-xl shadow-brand-pop/30 hover:scale-105 transition-all text-center">Solicita una Demo</a>
+                        <a href="#productos" class="bg-white border border-outline-variant/30 text-on-surface px-8 py-4 rounded-xl font-bold text-lg hover:bg-surface-container-low transition-colors text-center">Ver productos</a>
                     </div>
                 </div>
             </div>
-
-            <!-- Bloque de Imagen -->
-            <div class="relative w-full lg:w-1/2 h-[450px] lg:h-auto hero-image-box lg:absolute lg:right-0 lg:top-0 lg:bottom-0">
-                <!-- Sin degradados adicionales para mantener limpieza visual -->
-            </div>
-
         </section>
 
         <!-- 2. Dolor -->
         <section class="py-24 bg-surface-container-low text-center">
             <div class="max-w-7xl mx-auto px-8">
-                <h2 class="font-headline text-3xl md:text-4xl font-bold mb-16 text-on-surface">Lo que tu cuerpo (y tu espalda) no necesitan</h2>
+                <h2 class="font-headline text-4xl font-bold mb-16 text-on-surface">Lo que tu cuerpo (y tu espalda) no necesitan</h2>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
                     <div class="bg-surface-container-lowest p-10 rounded-3xl editorial-shadow flex flex-col items-center text-center">
                         <span class="material-symbols-outlined text-5xl text-brand-pop mb-6">delete_sweep</span>
@@ -127,12 +122,12 @@
         </section>
 
         <!-- 3. Misión -->
-        <section class="py-24 bg-surface">
-            <div class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 items-center text-left">
+        <section class="py-32 bg-surface">
+            <div class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-2 gap-20 items-center text-left">
                 <img alt="Misión Naiqua" class="rounded-[2rem] editorial-shadow w-full aspect-square object-cover" src="https://res.cloudinary.com/dob5eavlw/image/upload/v1777564273/magnific_replica-exactamente-esta-_2898750346_1_xn07yk.png"/>
                 <div>
-                    <h4 class="font-label uppercase tracking-widest text-brand-pop font-bold text-sm mb-4 tracking-widest">Nuestro Propósito</h4>
-                    <h2 class="font-headline text-4xl md:text-5xl font-bold mb-8 leading-tight text-on-surface">Existimos para que tú dejes de preocuparte por el agua.</h2>
+                    <h4 class="font-label uppercase tracking-widest text-brand-pop font-bold text-sm mb-4">NUESTRO PROPÓSITO</h4>
+                    <h2 class="font-headline text-5xl font-bold mb-8 leading-tight text-on-surface">Existimos para que tú dejes de preocuparte por el agua.</h2>
                     <p class="text-lg text-on-surface-variant leading-relaxed">Diseñamos sistemas de bienestar que se integran en tu vida para proteger lo que más quieres. Creemos que el agua pura es un derecho fundamental.</p>
                 </div>
             </div>
@@ -142,10 +137,10 @@
         <section class="py-24 bg-surface-container-lowest text-left">
             <div class="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 <div>
-                    <h2 class="font-headline text-4xl font-bold mb-6 text-on-surface">Pureza y Tecnología en cada Gota</h2>
+                    <h2 class="font-headline text-4xl md:text-5xl font-bold mb-6 text-on-surface">Pureza y Tecnología en cada Gota</h2>
                     <p class="text-lg text-on-surface-variant leading-relaxed">Nuestro proceso de Ósmosis Inversa elimina hasta el 99% de las impurezas, metales y bacterias.</p>
                 </div>
-                <div class="bg-surface-container-low rounded-[2.5rem] p-8 md:p-10 editorial-shadow grid grid-cols-2 gap-6 md:gap-8 text-center">
+                <div class="bg-surface-container-low rounded-[2.5rem] p-10 editorial-shadow grid grid-cols-2 gap-8 text-center">
                     <div class="flex flex-col items-center"><span class="material-symbols-outlined text-brand-pop mb-2">eco</span><h4 class="font-bold text-sm text-on-surface">Cero Plásticos</h4></div>
                     <div class="flex flex-col items-center"><span class="material-symbols-outlined text-brand-pop mb-2">back_hand</span><h4 class="font-bold text-sm text-on-surface">Sin Esfuerzo</h4></div>
                     <div class="flex flex-col items-center"><span class="material-symbols-outlined text-brand-pop mb-2">thermostat</span><h4 class="font-bold text-sm text-on-surface">A tu Gusto</h4></div>
@@ -160,16 +155,16 @@
                 <h2 class="font-headline text-4xl font-bold mb-16 text-on-surface">Tecnología diseñada para tu hogar</h2>
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 text-left">
                     <div class="group bg-surface-container-lowest rounded-[2.5rem] overflow-hidden shadow-lg transition-all duration-500 hover:-translate-y-4 hover:shadow-2xl flex flex-col">
-                        <img class="w-full h-[350px] md:h-[450px] object-cover" src="https://res.cloudinary.com/dob5eavlw/image/upload/v1777564171/Untitled_design_-_2026-04-30T174903.626_ejvfur.png" alt="Naiqua S"/>
-                        <div class="p-8 md:p-10 flex-grow">
+                        <img class="w-full h-[450px] object-cover" src="https://res.cloudinary.com/dob5eavlw/image/upload/v1777564171/Untitled_design_-_2026-04-30T174903.626_ejvfur.png" alt="Naiqua S"/>
+                        <div class="p-10 flex-grow">
                             <h3 class="font-headline text-3xl font-bold mb-2 text-on-surface">Naiqua S</h3>
                             <p class="text-on-surface-variant text-lg mb-6 leading-relaxed">Dispensador con agua fría y caliente al instante. Elegancia y salud en un solo equipo.</p>
-                            <a href="https://wa.me/34628101680?text=Hola!%20Me%20interesa%20el%20modelo%20Naiqua%20S" target="_blank" class="font-bold text-brand-pop inline-flex items-center gap-2 group-hover:gap-4 transition-all">Más información <span class="material-symbols-outlined">arrow_forward</span></a>
+                            <a href="https://wa.me/34628101680?text=Hola!%20Me%20gustaría%20saber%20más%20sobre%20vuestros%20productos%20de%20Naiqua" target="_blank" class="font-bold text-brand-pop inline-flex items-center gap-2 group-hover:gap-4 transition-all">Más información <span class="material-symbols-outlined">arrow_forward</span></a>
                         </div>
                     </div>
                     <div class="group bg-surface-container-lowest rounded-[2.5rem] overflow-hidden shadow-lg transition-all duration-500 hover:-translate-y-4 hover:shadow-2xl flex flex-col">
-                        <img class="w-full h-[350px] md:h-[450px] object-cover" src="https://res.cloudinary.com/dob5eavlw/image/upload/v1777564183/Untitled_design_-_2026-04-30T174925.644_nqgmmo.png" alt="Naiqua X"/>
-                        <div class="p-8 md:p-10 flex-grow">
+                        <img class="w-full h-[450px] object-cover" src="https://res.cloudinary.com/dob5eavlw/image/upload/v1777564183/Untitled_design_-_2026-04-30T174925.644_nqgmmo.png" alt="Naiqua X"/>
+                        <div class="p-10 flex-grow">
                             <h3 class="font-headline text-3xl font-bold mb-2 text-on-surface">Naiqua X</h3>
                             <p class="text-on-surface-variant text-lg mb-6 leading-relaxed">Máximo rendimiento compacto. Flujo directo de 800 GPD para tu cocina.</p>
                             <a href="https://wa.me/34628101680?text=Hola!%20Me%20interesa%20el%20modelo%20Naiqua%20X" target="_blank" class="font-bold text-brand-pop inline-flex items-center gap-2 group-hover:gap-4 transition-all">Más información <span class="material-symbols-outlined">arrow_forward</span></a>
@@ -179,36 +174,37 @@
             </div>
         </section>
 
-        <!-- 6. Lifestyle & Sidebar -->
+        <!-- 6. Lifestyle -->
         <section class="py-24 bg-surface text-left">
             <div class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-12 gap-8 items-stretch">
-                <div class="md:col-span-7 bg-brand-pop rounded-[2.5rem] p-10 md:p-12 text-white relative overflow-hidden flex flex-col justify-end editorial-shadow min-h-[500px]">
+                <div class="md:col-span-7 bg-brand-pop rounded-[2.5rem] p-12 text-white relative overflow-hidden flex flex-col justify-end editorial-shadow min-h-[550px]">
                     <img class="absolute inset-0 w-full h-full object-cover opacity-40" src="https://res.cloudinary.com/dob5eavlw/image/upload/v1777564273/magnific_replica-exactamente-esta-_2898750346_1_xn07yk.png" alt="Lifestyle"/>
                     <div class="absolute inset-0 bg-gradient-to-t from-brand-pop via-brand-pop/30 to-transparent"></div>
                     <div class="relative z-10">
-                        <span class="inline-block py-1 px-3 bg-white/20 rounded-full text-xs font-bold uppercase mb-6 tracking-widest text-white">Bienestar sin esfuerzo</span>
+                        <span class="inline-block py-1 px-3 bg-white/20 rounded-full text-xs font-bold uppercase mb-6 tracking-widest text-white">BIENESTAR SIN ESFUERZO</span>
                         <h2 class="font-headline text-4xl md:text-5xl font-bold mb-6 leading-tight">Vive la ligereza de tener agua pura siempre lista.</h2>
-                        <a href="https://wa.me/34628101680?text=Hola!%20Me%20gustaría%20saber%20más%20sobre%20vuestros%20productos%20de%20Naiqua" target="_blank" class="bg-white text-brand-pop px-8 py-3 rounded-xl font-bold inline-block hover:scale-105 active:scale-95 transition-all shadow-lg">Descubre la libertad</a>
+                        <a href="https://wa.me/34628101680?text=Hola!%20Me%20gustaría%20saber%20más%20sobre%20vuestros%20productos%20de%20Naiqua" target="_blank" class="bg-white text-brand-pop px-8 py-3 rounded-xl font-bold inline-block hover:scale-105 transition-all shadow-lg">Descubre la libertad</a>
                     </div>
                 </div>
-                <div class="md:col-span-5 bg-surface-container-high rounded-[2.5rem] p-8 md:p-10 flex flex-col editorial-shadow">
+                <div class="md:col-span-5 bg-surface-container-high rounded-[2.5rem] p-10 flex flex-col editorial-shadow">
                     <h3 class="font-headline text-3xl font-bold mb-10 text-on-surface">Tecnología Naiqua</h3>
                     <div class="space-y-6">
-                        <div class="flex gap-5 items-center"><div class="w-12 h-12 shrink-0 rounded-2xl bg-white flex items-center justify-center shadow-sm"><span class="material-symbols-outlined text-brand-pop">filter_alt</span></div><div><p class="font-bold text-on-surface text-lg leading-tight">Membrana 100 GPD</p><p class="text-xs md:text-sm text-on-surface-variant font-medium">Filtración de alto rendimiento</p></div></div>
-                        <div class="flex gap-5 items-center"><div class="w-12 h-12 shrink-0 rounded-2xl bg-white flex items-center justify-center shadow-sm"><span class="material-symbols-outlined text-brand-pop">eco</span></div><div><p class="font-bold text-on-surface text-lg leading-tight">Sistema ecológico</p><p class="text-xs md:text-sm text-on-surface-variant font-medium">Compromiso ambiental</p></div></div>
-                        <div class="flex gap-5 items-center"><div class="w-12 h-12 shrink-0 rounded-2xl bg-white flex items-center justify-center shadow-sm"><span class="material-symbols-outlined text-brand-pop">payments</span></div><div><p class="font-bold text-on-surface text-lg leading-tight">Ahorro económico real</p><p class="text-xs md:text-sm text-on-surface-variant font-medium">Reduce tus gastos mensuales</p></div></div>
-                        <div class="flex gap-5 items-center"><div class="w-12 h-12 shrink-0 rounded-2xl bg-white flex items-center justify-center shadow-sm"><span class="material-symbols-outlined text-brand-pop">kitchen</span></div><div><p class="font-bold text-on-surface text-lg leading-tight">Sistema sobremesa o pie</p><p class="text-xs md:text-sm text-on-surface-variant font-medium">Versatilidad para tu espacio</p></div></div>
-                        <div class="flex gap-5 items-center"><div class="w-12 h-12 shrink-0 rounded-2xl bg-white flex items-center justify-center shadow-sm"><span class="material-symbols-outlined text-brand-pop">check_circle</span></div><div><p class="font-bold text-on-surface text-lg leading-tight">Hogar libre de residuos</p><p class="text-xs md:text-sm text-on-surface-variant font-medium">Evita el consumo de botellas</p></div></div>
+                        <div class="flex gap-5 items-center"><div class="w-14 h-14 shrink-0 rounded-2xl bg-white flex items-center justify-center shadow-sm"><span class="material-symbols-outlined text-brand-pop">filter_alt</span></div><div><p class="font-bold text-on-surface text-lg leading-tight">Membrana 100 GPD</p><p class="text-sm text-on-surface-variant font-medium">Filtración de alto rendimiento</p></div></div>
+                        <div class="flex gap-5 items-center"><div class="w-14 h-14 shrink-0 rounded-2xl bg-white flex items-center justify-center shadow-sm"><span class="material-symbols-outlined text-brand-pop text-2xl">eco</span></div><div><p class="font-bold text-on-surface text-lg leading-tight">Sistema ecológico</p><p class="text-sm text-on-surface-variant font-medium">Compromiso ambiental</p></div></div>
+                        <div class="flex gap-5 items-center"><div class="w-14 h-14 shrink-0 rounded-2xl bg-white flex items-center justify-center shadow-sm"><span class="material-symbols-outlined text-brand-pop text-2xl text-brand-pop">payments</span></div><div><p class="font-bold text-on-surface text-lg leading-tight">Ahorro económico real</p><p class="text-sm text-on-surface-variant font-medium">Reduce tus gastos mensuales</p></div></div>
+                        <div class="flex gap-5 items-center"><div class="w-14 h-14 shrink-0 rounded-2xl bg-white flex items-center justify-center shadow-sm"><span class="material-symbols-outlined text-brand-pop text-2xl text-brand-pop text-brand-pop">kitchen</span></div><div><p class="font-bold text-on-surface text-lg leading-tight">Sistema sobremesa o pie</p><p class="text-sm text-on-surface-variant font-medium">Versatilidad para tu espacio</p></div></div>
+                        <div class="flex gap-5 items-center"><div class="w-14 h-14 shrink-0 rounded-2xl bg-white flex items-center justify-center shadow-sm"><span class="material-symbols-outlined text-brand-pop text-2xl text-brand-pop text-brand-pop">check_circle</span></div><div><p class="font-bold text-on-surface text-lg leading-tight">Hogar libre de residuos</p><p class="text-sm text-on-surface-variant font-medium">Evita el consumo de botellas</p></div></div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="py-24 px-6">
-            <div class="max-w-5xl mx-auto brand-gradient rounded-[3rem] p-12 md:p-16 text-center text-white editorial-shadow relative overflow-hidden">
-                <h2 class="font-headline text-4xl md:text-5xl font-extrabold mb-8 relative z-10 text-white">Pásate al agua pura.</h2>
-                <p class="text-lg md:text-xl text-white/80 mb-10 relative z-10">Descubre por qué miles de hogares ya confían en Naiqua para su hidratación diaria.</p>
-                <a href="https://wa.me/34628101680?text=Hola!%20Me%20gustaría%20saber%20más%20sobre%20vuestros%20productos%20de%20Naiqua" target="_blank" class="bg-white text-brand-pop px-10 py-4 rounded-xl font-extrabold text-xl shadow-2xl hover:scale-105 active:scale-95 transition-all relative z-10 inline-block">Solicita una Demo ahora</a>
+        <!-- 7. CTA Final -->
+        <section class="py-24 px-8">
+            <div class="max-w-5xl mx-auto brand-gradient rounded-[3rem] p-16 text-center text-white editorial-shadow relative overflow-hidden">
+                <h2 class="font-headline text-5xl font-extrabold mb-8 relative z-10 text-white">Pásate al agua pura.</h2>
+                <p class="text-xl text-white/80 mb-10 relative z-10">Descubre por qué miles de hogares ya confían en Naiqua para su hidratación diaria.</p>
+                <a href="https://wa.me/34628101680?text=Hola!%20Me%20gustaría%20saber%20más%20sobre%20vuestros%20productos%20de%20Naiqua" target="_blank" class="bg-white text-brand-pop px-12 py-5 rounded-xl font-extrabold text-xl shadow-2xl hover:scale-105 transition-all relative z-10 inline-block">Solicita una Demo ahora</a>
             </div>
         </section>
     </main>
